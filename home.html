@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6426474639716247" crossorigin="anonymous"></script>
+    <title>Consulta Operadora - Saiba qual a operadora do celular</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="Pesquise, busque e saiba a operadora atual do celular antes de ligar.">
+    <meta name="keywords" content="operadora, celular, móvel, fixo, saber operadora, qual a operadora, descobrir operadora de celular, como saber a operadora do celular, pesquisar operadora, ver operadora">
+
+
+    <!-- Resources -->
+    <link rel="icon" href="../static/assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- External Dependencies -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-234687444-1">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-234687444-1');
+    </script>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default no-mrg">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/static" title="Consulta Operadora" style="font-weight:bold;color:#000;">Consulta Operadora</a>
+
+                <div class="btn-container">
+                    <a title="Consultas Massivas WhatsApp" class="whats-button" style="background-color:#242582;" href="https://bit.ly/3BuYAHg" >
+				<span >
+				CONSULTAS EM LOTES
+				</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Home</a></li>
+                    <li><a href="#how-to">Como utilizar</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="row header">
+        <div class="col-md-8 col-md-offset-2 card">
+            <div class="text-center">
+                <h1 style="margin:0px;">Consulta operadora</h1>
+                <h2 style="margin:5px;">Descubra a operadora atual do telefone.</h2>
+                <form action="{{ url_for('get_operadora') }}" method="post" class="col-md-10 col-md-offset-1 inputform">
+                    <div class="col-md-8">
+                        <input type="text" id="telephone" name="telephone" class="telephone-input" value="" placeholder="Informe um telefone válido">
+                    </div>
+                    <div class="col-md-4">
+                        <button id="consultar" class="submit-button" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processando">
+                            <i style="display:none;" id="spin" class="fa fa-spinner fa-spin "></i>
+                            Consultar
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- header end. -->
+        </div>
+        <!-- col end. -->
+    </div>
+
+    <div class="row" id="about">
+        <div class="col-md-8 col-md-offset-2 card about">
+            <h1>Sobre o Consulta Operadora</h1>
+            <p>
+                Saiba qual operadora de qualquer número, seja celular ou fixo.
+            </p>
+        </div>
+    </div>
+
+    <div class="row" id="how-to">
+        <div class="col-md-8 col-md-offset-2 card about">
+            <h1>Como utilizar o Consulta Operadora</h1>
+            <p>
+                Ferramenta de consulta da operadora.
+            </p>
+
+            <p>
+                Passos para realizar a consulta:
+            </p>
+            <p><b>1º passo:</b> Tenha em mãos o número que deseja consultar.</p>
+            <p><b>2º passo:</b> Insira o número fixo/móvel no campo de texto acima.</p>
+            <p><b>3º passo:</b> Clique no botão <b>"Consultar"</b> acima e aguarde a consulta ser realizada.</p>
+            <p><b>4º passo:</b> Pronto! O resultado aparecerá logo abaixo do campo textual com as informações de operadora.</p>
+        </div>
+    </div>
+
+    <div class="row" id="faq">
+        <div class="col-md-8 col-md-offset-2 card about">
+            <h1>FAQ</h1>
+            <p>Possíveis perguntas a serem respondida</p>
+
+            <p><b>Eu inseri o telefone e retornou erro, o que pode ser?</b><br>
+                Quando isso acontecer, significa que não possuimos a informação atualizada do número de telefone informado.
+            </p>
+
+            <p><b>Estou sendo bloqueado pela quantidade de consultas; estou fazendo algo errado?</b><br>
+                Não! Mas utilizamos um "limitador" de pesquisas para não sobrecarregar nossos servidores.
+            </p>
+
+            <p><b>Clico no botão de consultar e nada acontece, por quê?</b><br>
+                Isso acontece geralmente quando estamos fazendo manutenção. Esperando alguns minutos e tentando novamente ira resolver.
+            </p>
+
+            <p><b>Entrei em contato pelo e-mail/whatsapp e ninguém respondeu, por quê?</b><br>
+                A nossa equipe trabalha em projetos paralelos, assim que possível, retornaremos.
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="row" id="contact">
+        <div class="col-md-8 col-md-offset-2 card about">
+            <h1>Contato</h1>
+            <p>Em caso de problemas, perguntas, sugestões ou dúvidas, entre em contato conosco pelo <a href="mailto:atendimento@fafalabs.com.br">atendimento@fafalabs.com.br</a>
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+        <p>© 2022 <a href="#"> Consulta Operadora </a>, Todos os direitos reservados.</p>
+    </footer>
+</div>
+<script src="../static/js/scripts.js"></script>
+</body>
+</html>
